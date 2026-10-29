@@ -16,6 +16,14 @@ export const sitio = {
   whatsapp: "34600000000",
   mensajeWhatsapp:
     "Hola. Tengo un negocio en Málaga y quiero una web para mi ficha de Google.",
+  mensajeLlamada:
+    "Hola. Quiero agendar una llamada para ver la web de mi negocio.",
+  /**
+   * Enlace público del evento de Cal.com. No hace falta una clave secreta.
+   */
+  agendaUrl:
+    process.env.NEXT_PUBLIC_CAL_URL ??
+    "https://cal.com/sergio-perez-montalvo-cagncf/30min",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
 } as const
 

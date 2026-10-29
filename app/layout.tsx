@@ -31,7 +31,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   const json = JSON.stringify(datosEstructurados());
 
   return (
-    <html lang="es">
+    <html lang="es" data-scroll-behavior="smooth">
       <body>
         <Cursor />
         <script

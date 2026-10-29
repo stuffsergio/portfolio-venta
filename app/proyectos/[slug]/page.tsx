@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Suspense } from "react";
 import {
   etiquetaTipo,
   getProyecto,
@@ -27,11 +28,19 @@ export async function generateMetadata({
   };
 }
 
-export default async function ProyectoPage({
+export default function ProyectoPage({
   params,
 }: {
   params: Promise<Params>;
 }) {
+  return (
+    <Suspense fallback={<p className="wrap page-head kicker">Proyectos</p>}>
+      <FichaProyecto params={params} />
+    </Suspense>
+  );
+}
+
+async function FichaProyecto({ params }: { params: Promise<Params> }) {
   const { slug } = await params;
   const proyecto = getProyecto(slug);
   if (!proyecto) notFound();
@@ -46,7 +55,9 @@ export default async function ProyectoPage({
         </p>
         <div className="case-tags">
           <span className="tag">{proyecto.sector}</span>
-          <span className="tag">{etiquetaTipo(proyecto.tipo)}</span>
+          <span className="tag">
+            {proyecto.etiqueta ?? etiquetaTipo(proyecto.tipo)}
+          </span>
           {proyecto.ejemplo ? <span className="tag tag-muestra">Muestra</span> : null}
         </div>
         <h1>{proyecto.titulo}</h1>
@@ -64,11 +75,25 @@ export default async function ProyectoPage({
         <p className="case-nav">
           <span>Para {proyecto.cliente.nombre}</span>
           {proyecto.cliente.enlace ? (
-            <a href={proyecto.cliente.enlace} rel="noopener noreferrer">
-              Ver el sitio
+            <a
+              href={proyecto.cliente.enlace}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {proyecto.cliente.enlace.includes("instagram.com")
+                ? "Ver la marca"
+                : "Ver el sitio"}
             </a>
           ) : null}
         </p>
+      ) : null}
+
+      {proyecto.imagenes.length > 0 ? (
+        <div className="case-fotos">
+          {proyecto.imagenes.map((src) => (
+            <img key={src} src={src} alt={proyecto.titulo} />
+          ))}
+        </div>
       ) : null}
 
       <div className="case">

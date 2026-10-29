@@ -557,6 +557,35 @@ img {
   font-size: 1.8rem;
 }
 
+.project-panel-foto {
+  display: block;
+  padding: 0;
+  overflow: hidden;
+  background: #111;
+}
+
+.project-panel-foto img,
+.case-fotos img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-panel-foto img {
+  height: 14rem;
+}
+
+.case-fotos {
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: 1.4rem;
+}
+
+.case-fotos img {
+  max-height: 36rem;
+  border: 1px solid var(--ink);
+}
+
 .project-tags,
 .case-tags {
   display: flex;
@@ -795,9 +824,47 @@ img {
 }
 
 .contact-layout,
-.presupuesto {
+.presupuesto,
+.agenda {
   display: grid;
   gap: 0.75rem;
+}
+
+.agenda {
+  gap: 1.4rem;
+  align-items: start;
+}
+
+.agenda .lead {
+  margin-top: 0.8rem;
+}
+
+.agenda-marco {
+  border: 1px solid var(--ink);
+  background: var(--paper);
+}
+
+.agenda-marco:has(iframe) {
+  min-height: 42rem;
+}
+
+.agenda-marco iframe {
+  display: block;
+  width: 100%;
+  height: 42rem;
+  border: 0;
+}
+
+.agenda-espera {
+  display: grid;
+  align-content: start;
+  gap: 1rem;
+  padding: 1.2rem;
+}
+
+.agenda-espera p {
+  max-width: 28rem;
+  color: var(--muted);
 }
 
 .contact-aside h2,
@@ -1168,7 +1235,8 @@ img {
   }
 
   .contact-layout,
-  .presupuesto {
+  .presupuesto,
+  .agenda {
     grid-template-columns: 0.9fr 1.1fr;
     align-items: start;
   }

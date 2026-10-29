@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Agenda } from "@/components/Agenda";
 import { FaqList } from "@/components/FaqList";
 import { FichaPreview } from "@/components/FichaPreview";
 import { Icono } from "@/components/Icono";
@@ -33,6 +34,9 @@ export default function Home() {
             <Link className="btn btn-ghost" href="/presupuesto">
               Pedir presupuesto
             </Link>
+            <Link className="btn btn-ghost" href="#llamada">
+              Agendar llamada
+            </Link>
           </div>
         </div>
         <FichaPreview />
@@ -64,13 +68,13 @@ export default function Home() {
           <div className="section-head">
             <h2 id="proyectos-titulo">Proyectos</h2>
             <p className="lead">
-              Así contamos un encargo: sector, problema y lo que se programó. El
-              nombre del cliente entra cuando haya permiso.
+              Notte Club y Caseo son encargos reales. Al lado, el tipo de página
+              que hacemos para un negocio en Google Maps.
             </p>
           </div>
           <p className="notice">
-            Estos casos son de muestra. Los sustituimos por los encargos reales
-            en cuanto se puedan publicar.
+            Los marcados como muestra ilustran una web de presencia. Todavía no
+            llevan nombre de cliente.
           </p>
           <div className="project-grid">
             {proyectos.map((proyecto) => (
@@ -116,6 +120,10 @@ export default function Home() {
             <Link href="/servicios#preguntas">Preguntas frecuentes</Link>
           </p>
         </section>
+      </Reveal>
+
+      <Reveal>
+        <Agenda />
       </Reveal>
 
       <Reveal>

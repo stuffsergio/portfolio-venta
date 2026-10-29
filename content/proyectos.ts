@@ -10,6 +10,7 @@ export type Proyecto = {
   slug: string
   sector: string
   tipo: TipoProyecto
+  etiqueta?: string
   titulo: string
   resumen: string
   problema: string
@@ -22,20 +23,46 @@ export type Proyecto = {
 
 export const proyectos: Proyecto[] = [
   {
-    slug: "consulta-en-maps",
-    sector: "Salud",
-    tipo: "web",
-    titulo: "Una consulta que se entiende desde Maps",
+    slug: "notte-club",
+    sector: "Moda",
+    tipo: "aplicacion",
+    etiqueta: "Tienda online",
+    titulo: "Notte Club, la tienda de la marca",
     resumen:
-      "Web de una página para que quien abre la ficha vea servicios, horario y pueda llamar.",
+      "Tienda de streetwear con catálogo, ficha de producto, carrito y pago en la propia web.",
     problema:
-      "Quien encontraba la consulta en Google Maps llegaba a una ficha sin una página donde ver los servicios, el horario y el teléfono con calma.",
+      "La marca enseñaba las prendas en redes, pero el pedido no se podía cerrar en una tienda propia, con talla, carrito y pago.",
     solucion:
-      "Una web de presencia, pensada para el móvil, con los servicios, el horario, cómo llegar y los botones de llamada y WhatsApp. La dirección queda lista para pegarla en la ficha.",
+      "Una tienda en notteclub.es: catálogo, ficha de cada prenda, carrito, pago con Stripe, newsletter, lookbook y fondos de pantalla.",
     resultado:
-      "La ficha puede enlazar la web y, desde el teléfono, la llamada está a un toque.",
-    imagenes: [],
-    ejemplo: true,
+      "Quien quiere una prenda la elige y la paga en la web de la marca.",
+    imagenes: ["/proyectos/notte-club.webp", "/proyectos/notte-club-2.webp"],
+    cliente: {
+      nombre: "Notte Club",
+      enlace: "https://notteclub.es",
+    },
+    ejemplo: false,
+  },
+  {
+    slug: "caseo-events",
+    sector: "Eventos",
+    tipo: "web",
+    etiqueta: "Web de marca",
+    titulo: "Caseo, la noche en una sola página",
+    resumen:
+      "Web de la promotora con el próximo evento, el archivo de volúmenes y la galería de la noche.",
+    problema:
+      "La marca vivía en Instagram. Quien llegaba no tenía una página propia donde ver el próximo evento, el venue y las noches anteriores.",
+    solucion:
+      "Una web editorial en navy y blanco: el evento destacado a pantalla completa, el archivo de volúmenes, la galería y el enlace a Instagram.",
+    resultado:
+      "Caseo tiene una web de marca, con la próxima noche delante y el archivo detrás.",
+    imagenes: ["/proyectos/caseo-cartel.webp", "/proyectos/caseo-noche.jpg"],
+    cliente: {
+      nombre: "Caseo",
+      enlace: "https://caseo-events.vercel.app/",
+    },
+    ejemplo: false,
   },
   {
     slug: "comercio-de-barrio",
@@ -50,22 +77,6 @@ export const proyectos: Proyecto[] = [
       "Una página con un recorrido breve de lo que vende, las fotos del local, el horario por días y el mapa para llegar. Llamada y WhatsApp quedan fijos al hacer scroll.",
     resultado:
       "Quien llega desde Maps ve el oficio del comercio antes de decidir si se acerca.",
-    imagenes: [],
-    ejemplo: true,
-  },
-  {
-    slug: "reservas-a-medida",
-    sector: "Servicios",
-    tipo: "aplicacion",
-    titulo: "Reservas sin libreta ni horas pisadas",
-    resumen:
-      "Aplicación web para pedir hora y ver el día ordenado, cuando la página de presentación ya no basta.",
-    problema:
-      "Las reservas llegaban por teléfono y se apuntaban en una libreta. Dos personas cogían la misma hora y el hueco se descubría al llegar el cliente.",
-    solucion:
-      "Una aplicación web en la que el cliente pide hora según los huecos libres y el negocio ve el día en una sola pantalla. La web de presencia sigue explicando el servicio y enlaza con la reserva.",
-    resultado:
-      "El día se consulta en la aplicación, con las horas ocupadas visibles para quien atiende.",
     imagenes: [],
     ejemplo: true,
   },

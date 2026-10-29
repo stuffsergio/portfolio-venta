@@ -5,7 +5,7 @@ import { proyectos } from "@/content/proyectos";
 export const metadata: Metadata = {
   title: "Proyectos",
   description:
-    "Casos de webs de presencia y aplicaciones a medida para negocios locales. El nombre del cliente se publica con permiso.",
+    "Notte Club, Caseo y casos de muestra de webs para negocios locales.",
 };
 
 export default function ProyectosPage() {
@@ -15,15 +15,14 @@ export default function ProyectosPage() {
         <p className="kicker">Proyectos</p>
         <h1>El trabajo, contado por sector.</h1>
         <p className="lead">
-          Cada ficha dice el problema, lo que se programó y, si lo hay, el
-          resultado. El nombre, el logo y el enlace del cliente tienen su sitio
-          para cuando haya permiso.
+          Notte Club y Caseo se pueden visitar. El resto son muestras del tipo
+          de página para un negocio local, todavía sin nombre de cliente.
         </p>
       </header>
       <section className="wrap section">
         <p className="notice">
-          Estos casos son de muestra. Los sustituimos por los encargos reales
-          en cuanto se puedan publicar.
+          Los marcados como muestra ilustran una web de presencia. Todavía no
+          llevan nombre de cliente.
         </p>
         <div className="project-grid">
           {proyectos.map((proyecto) => (
