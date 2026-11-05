@@ -33,8 +33,7 @@ export const sitio = {
 function urlPublica() {
   const explicita = process.env.NEXT_PUBLIC_SITE_URL
   if (explicita) return explicita.replace(/\/$/, "")
-  const produccion = process.env.VERCEL_PROJECT_PRODUCTION_URL
-  if (produccion) return `https://${produccion}`
+  if (process.env.VERCEL) return "https://studio-web-malaga.vercel.app"
   return "http://localhost:3000"
 }
 
