@@ -27,8 +27,16 @@ export const sitio = {
   agendaUrl:
     process.env.NEXT_PUBLIC_CAL_URL ??
     "https://cal.com/sergio-perez-montalvo-cagncf/30min",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  url: urlPublica(),
 } as const
+
+function urlPublica() {
+  const explicita = process.env.NEXT_PUBLIC_SITE_URL
+  if (explicita) return explicita.replace(/\/$/, "")
+  const produccion = process.env.VERCEL_PROJECT_PRODUCTION_URL
+  if (produccion) return `https://${produccion}`
+  return "http://localhost:3000"
+}
 
 export const seccionesInicio = [
   {
