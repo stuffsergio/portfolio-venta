@@ -64,6 +64,7 @@ export function Presupuesto({ tipoInicial = "web" }: { tipoInicial?: string }) {
 
   return (
     <div className="presupuesto">
+      {lineasPresupuesto.length > 1 ? (
       <div className="presupuesto-tipos">
         {lineasPresupuesto.map((item) => (
           <button
@@ -79,6 +80,9 @@ export function Presupuesto({ tipoInicial = "web" }: { tipoInicial?: string }) {
           </button>
         ))}
       </div>
+      ) : (
+        <p className="kicker">{linea.plazo}</p>
+      )}
 
       <form className="form presupuesto-form" onSubmit={enviar}>
         <fieldset className="extras">

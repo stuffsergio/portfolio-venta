@@ -1,13 +1,16 @@
 /**
  * Datos del estudio. Nombre, teléfono y WhatsApp se cambian solo aquí.
- * El nombre es provisional hasta cerrar la marca.
  */
 
 export const sitio = {
-  nombre: "Estudio Local",
-  nombreProvisional: true,
+  nombre: "Studio Web Málaga",
+  nombreProvisional: false,
+  /**
+   * Correo que el cliente invita en GitHub y en Vercel.
+   */
+  correoEstudio: "std.web.malaga@gmail.com",
   descripcion:
-    "Programamos la web que tu negocio enseña en Google Maps y en su ficha. Cuando hace falta más, construimos la aplicación a medida.",
+    "Programamos la página web que tu negocio enseña en Google Maps y en su ficha.",
   localidad: "Málaga",
   region: "Andalucía",
   pais: "España",
@@ -26,6 +29,34 @@ export const sitio = {
     "https://cal.com/sergio-perez-montalvo-cagncf/30min",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
 } as const
+
+export const seccionesInicio = [
+  {
+    href: "/servicios",
+    titulo: "La página",
+    texto: "La web que el negocio enseña en Google Maps.",
+  },
+  {
+    href: "/proyectos",
+    titulo: "Proyectos",
+    texto: "Notte Club y Caseo, para verlos enteros.",
+  },
+  {
+    href: "/presupuesto",
+    titulo: "Presupuesto",
+    texto: "Qué entra en la página, el plazo y el mensaje.",
+  },
+  {
+    href: "/llamada",
+    titulo: "Llamada",
+    texto: "Veinte minutos para ver si encaja.",
+  },
+  {
+    href: "/pago",
+    titulo: "Pago",
+    texto: "El cobro de la web, directo a Stripe.",
+  },
+] as const
 
 export const navegacion = [
   { href: "/", label: "Inicio" },
@@ -95,7 +126,7 @@ export const pasos = [
     numero: "02",
     titulo: "Cerramos el encargo",
     texto:
-      "Página de presencia o aplicación. Qué entra, qué materiales hacen falta y el plazo.",
+      "Qué entra en la página, qué materiales hacen falta y el plazo.",
   },
   {
     numero: "03",
@@ -125,17 +156,12 @@ export const faqs = [
   {
     pregunta: "¿Cuánto tarda?",
     respuesta:
-      "Una web de presencia suele publicarse en dos o tres semanas desde que tenemos los materiales. Una aplicación se acuerda por fases, con una primera versión usable antes de seguir ampliando.",
+      "Una página suele publicarse en dos o tres semanas desde que tenemos los materiales.",
   },
   {
     pregunta: "¿Cómo queda enlazada en la ficha de Google?",
     respuesta:
       "Publicamos la web y os dejamos la dirección para pegarla en el campo de sitio web de la ficha. Si hace falta, os acompañamos a colocarla. A partir de ahí, quien abre el negocio en Maps puede entrar en la página.",
-  },
-  {
-    pregunta: "¿Cuándo conviene una aplicación en lugar de una web?",
-    respuesta:
-      "Cuando el cliente tiene que reservar, pedir, consultar un estado o entrar en un área propia. La web de presencia explica el negocio y facilita la llamada. La aplicación hace un trabajo del día a día.",
   },
   {
     pregunta: "¿Cuánto cuesta?",
@@ -173,7 +199,7 @@ export const socios: Socio[] = [
     frase:
       "Diseña y programa la web, y la deja lista para publicarla y enlazarla en la ficha.",
     texto:
-      "Construye la página a medida, pensada para el móvil y para la ficha de Google. Cuando el negocio necesita reservas, pedidos o un área de cliente, programa esa aplicación.",
+      "Construye la página a medida, pensada para el móvil y para la ficha de Google.",
   },
 ]
 
@@ -192,25 +218,8 @@ export const servicios = [
       "Textos, fotos y horarios del negocio",
       "Dirección lista para la ficha de Google",
     ],
-    enlace: "/presupuesto?tipo=web",
+    enlace: "/presupuesto",
     cta: "Pedir esta web",
-  },
-  {
-    id: "aplicacion",
-    numero: "02",
-    titulo: "Aplicación web a medida",
-    bajada:
-      "El paso siguiente, cuando el negocio necesita que la web haga un trabajo.",
-    texto:
-      "Reservas, pedidos, un portal de clientes o una herramienta interna. La programamos alrededor de cómo trabajáis, para que el día a día deje de depender de la libreta, el teléfono y los mensajes sueltos.",
-    puntos: [
-      "Reservas y citas",
-      "Pedidos y encargos",
-      "Portal de clientes",
-      "Herramienta interna del negocio",
-    ],
-    enlace: "/presupuesto?tipo=aplicacion",
-    cta: "Contar la aplicación",
   },
 ] as const
 
@@ -228,29 +237,12 @@ export const lineasPresupuesto = [
       "Dirección lista para la ficha",
     ],
   },
-  {
-    id: "aplicacion",
-    titulo: "Aplicación a medida",
-    plazo: "Por fases, con una primera versión usable",
-    texto:
-      "Cuando la web tiene que reservar, pedir o guardar el trabajo del día.",
-    incluye: [
-      "Reservas, pedidos o área de clientes",
-      "La pantalla que usa quien atiende",
-      "La web de presencia sigue explicando el negocio",
-      "Entregas por fases, no de golpe",
-    ],
-  },
 ] as const
 
 export const extrasPresupuesto = [
   { id: "paginas", tipo: "web", label: "Más de una página" },
   { id: "textos", tipo: "web", label: "Textos escritos por el estudio" },
   { id: "fotos", tipo: "web", label: "Selección de fotografías" },
-  { id: "reservas", tipo: "aplicacion", label: "Reservas o citas" },
-  { id: "pedidos", tipo: "aplicacion", label: "Pedidos" },
-  { id: "portal", tipo: "aplicacion", label: "Área de clientes" },
-  { id: "interna", tipo: "aplicacion", label: "Herramienta interna" },
 ] as const
 
 export const condicionesPresupuesto = [

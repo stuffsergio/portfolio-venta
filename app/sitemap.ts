@@ -7,6 +7,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     "/servicios",
     "/presupuesto",
+    "/llamada",
+    "/pago",
     "/proyectos",
     "/estudio",
     "/contacto",

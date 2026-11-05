@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
+import { Visor } from "@/components/Visor";
 import {
   etiquetaTipo,
   getProyecto,
@@ -89,11 +90,7 @@ async function FichaProyecto({ params }: { params: Promise<Params> }) {
       ) : null}
 
       {proyecto.imagenes.length > 0 ? (
-        <div className="case-fotos">
-          {proyecto.imagenes.map((src) => (
-            <img key={src} src={src} alt={proyecto.titulo} />
-          ))}
-        </div>
+        <Visor imagenes={proyecto.imagenes} titulo={proyecto.titulo} />
       ) : null}
 
       <div className="case">

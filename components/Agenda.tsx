@@ -24,8 +24,7 @@ export function Agenda() {
           <p className="kicker">20 minutos</p>
           <h2 id="llamada-titulo">Agenda una llamada</h2>
           <p className="lead">
-            Vemos el negocio y si os encaja una web de presencia o ya una
-            aplicación. Sin compromiso.
+            Vemos el negocio y si os encaja la página. Sin compromiso.
           </p>
           <ul className="ticks">
             <li>Elegís el hueco en el calendario.</li>

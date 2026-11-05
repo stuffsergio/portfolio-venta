@@ -12,8 +12,7 @@ export function Footer() {
             {sitio.localidad}, {sitio.pais}
           </p>
           <p className="footer-note">
-            Webs para la ficha de Google y aplicaciones a medida para negocios
-            locales.
+            Páginas web para negocios locales.
           </p>
         </div>
         <div className="footer-links">

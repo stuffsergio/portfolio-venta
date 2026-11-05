@@ -25,7 +25,7 @@ export const proyectos: Proyecto[] = [
   {
     slug: "notte-club",
     sector: "Moda",
-    tipo: "aplicacion",
+    tipo: "web",
     etiqueta: "Tienda online",
     titulo: "Notte Club, la tienda de la marca",
     resumen:

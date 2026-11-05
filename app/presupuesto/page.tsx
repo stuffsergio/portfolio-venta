@@ -5,7 +5,7 @@ import { Presupuesto } from "@/components/Presupuesto";
 export const metadata: Metadata = {
   title: "Presupuesto",
   description:
-    "Elige web de presencia o aplicación a medida, marca lo que entra y pide el presupuesto por WhatsApp.",
+    "Marca lo que entra en la página y pide el presupuesto por WhatsApp.",
 };
 
 async function PresupuestoConTipo({

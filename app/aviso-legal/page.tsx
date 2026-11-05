@@ -20,7 +20,7 @@ export default function AvisoLegalPage() {
           {sitio.nombreProvisional
             ? " (denominación provisional del estudio)"
             : ""}
-          . Actividad: diseño y programación de páginas y aplicaciones web para
+          . Actividad: diseño y programación de páginas web para
           negocios. Ámbito: {sitio.localidad}, {sitio.region}, {sitio.pais}.
         </p>
         <p>

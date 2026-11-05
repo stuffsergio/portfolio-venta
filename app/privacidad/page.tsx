@@ -28,8 +28,8 @@ export default function PrivacidadPage() {
         </p>
         <h2>Para qué</h2>
         <p>
-          Responder al encargo y preparar, si encaja, una propuesta de web o de
-          aplicación. La base es la solicitud de la persona interesada.
+          Responder al encargo y preparar, si encaja, una propuesta de página
+          web. La base es la solicitud de la persona interesada.
         </p>
         <h2>WhatsApp</h2>
         <p>

@@ -21,8 +21,8 @@
   --line: #d8d8d8;
   --paper: #ffffff;
   --wash: #f3f3f3;
-  --sun: #ead637;
-  --wine: #af1b3f;
+  --sun: transparent;
+  --wine: #5c5c5c;
   --header: 4.5rem;
   color-scheme: light;
 }
@@ -1283,5 +1283,277 @@ img {
     opacity: 1;
     transform: none;
     transition: none;
+  }
+
+  .marquee-pista,
+  .visor img {
+    animation: none;
+    transition: none;
+  }
+}
+
+.logo-name {
+  font-family: "Helvetica Neue LT Pro", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-synthesis: weight;
+  font-size: 1.05rem;
+  letter-spacing: -0.03em;
+  text-decoration: none;
+}
+
+.header-contacto,
+.enlace-texto,
+.indice-ver {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+}
+
+.site-header {
+  border-bottom: 0;
+  background: var(--paper);
+}
+
+.header-bar {
+  justify-content: space-between;
+}
+
+.hero {
+  display: block;
+  padding-block: 4.5rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  max-width: min(16ch, 100%);
+  margin-inline: auto;
+  font-size: clamp(2.7rem, 7vw, 5.6rem);
+}
+
+.hero .lead {
+  margin-inline: auto;
+}
+
+.marquee {
+  overflow: hidden;
+  margin-block: 1.5rem 2.5rem;
+}
+
+.marquee:hover .marquee-pista {
+  animation-play-state: paused;
+}
+
+.marquee-pista {
+  display: flex;
+  width: max-content;
+  gap: 1.25rem;
+  animation: cinta 36s linear infinite;
+}
+
+.marquee-item {
+  display: grid;
+  gap: 0.55rem;
+  width: min(28rem, 70vw);
+  color: inherit;
+  text-decoration: none;
+}
+
+.marquee-item img,
+.marquee-vacio {
+  width: 100%;
+  height: 46vh;
+  min-height: 16rem;
+  object-fit: cover;
+  background: var(--wash);
+}
+
+.marquee-vacio {
+  display: grid;
+  place-items: end start;
+  padding: 1rem;
+  font-family: Centurion, "Times New Roman", serif;
+  font-size: 2rem;
+}
+
+.marquee-nombre {
+  font-size: 0.95rem;
+}
+
+.indice {
+  display: grid;
+  padding-bottom: 4rem;
+}
+
+.indice a {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  align-items: end;
+  padding: 1.5rem 0;
+  border-top: 1px solid #e6e6e6;
+  color: inherit;
+  text-decoration: none;
+}
+
+.indice a:last-child {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.indice a span:first-child {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.indice strong {
+  font-family: Centurion, "Times New Roman", serif;
+  font-weight: 400;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+}
+
+.indice a span span {
+  color: var(--muted);
+}
+
+.visor {
+  position: relative;
+  height: 72vh;
+  min-height: 22rem;
+  margin-bottom: 1.6rem;
+  background: var(--wash);
+  overflow: hidden;
+}
+
+.visor img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.visor img.visor-on {
+  opacity: 1;
+}
+
+.visor-cuenta {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  color: #fff;
+  mix-blend-mode: difference;
+}
+
+.pago-accion,
+.form {
+  max-width: 32rem;
+  margin-top: 1.6rem;
+}
+
+.enlace-texto {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+}
+
+.enlace-texto:disabled {
+  opacity: 0.5;
+}
+
+.ficha,
+.include-item,
+.partner,
+.service-block,
+.case,
+.contact-aside,
+.prose,
+.project-card,
+.tipo,
+.resumen,
+.faq,
+.agenda-marco,
+.notice,
+.cta-band {
+  border-color: transparent;
+  background: transparent;
+  box-shadow: none;
+}
+
+.field input,
+.field textarea {
+  border: 0;
+  border-bottom: 1px solid #e6e6e6;
+  border-radius: 0;
+  padding-inline: 0;
+  background: transparent;
+}
+
+.site-footer {
+  color: var(--ink);
+  background: var(--paper);
+  border-top: 0;
+}
+
+.footer-place,
+.footer-note,
+.footer-links a {
+  color: var(--muted);
+}
+
+.btn,
+.btn-primary,
+.btn-ghost,
+.header-wa,
+.header-quote,
+.header-call {
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  min-height: 0;
+  padding: 0;
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+}
+
+.btn-primary:hover,
+.header-wa:hover,
+.btn-ghost:hover,
+.header-call:hover,
+.header-quote:hover,
+.tipo-activo,
+.tipo:hover {
+  background: transparent;
+  color: var(--ink);
+  border-color: transparent;
+  box-shadow: none;
+  transform: none;
+}
+
+.tag,
+.tag-muestra {
+  border: 0;
+  padding-inline: 0;
+  background: transparent;
+}
+
+.cta-band,
+.cta-band p,
+.cta-band .btn-primary {
+  color: var(--ink);
+  background: transparent;
+  border: 0;
+}
+
+@keyframes cinta {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% - 0.625rem));
   }
 }

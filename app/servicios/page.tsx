@@ -5,8 +5,7 @@ import { pasos, servicios } from "@/content/sitio";
 
 export const metadata: Metadata = {
   title: "Servicios",
-  description:
-    "Web de presencia para la ficha de Google y aplicaciones web a medida para negocios de Málaga.",
+  description: "La página web que un negocio de Málaga enseña en Google Maps.",
 };
 
 export default function ServiciosPage() {
@@ -14,10 +13,9 @@ export default function ServiciosPage() {
     <>
       <header className="wrap page-head">
         <p className="kicker">Servicios</p>
-        <h1>Dos encargos, claros.</h1>
+        <h1>La página del negocio.</h1>
         <p className="lead">
-          Primero, la web que el negocio enseña en Google Maps. Después, la
-          aplicación, cuando la página ya tiene que hacer un trabajo.
+          Una web para quien ya os ha encontrado en Google Maps.
         </p>
       </header>
 
