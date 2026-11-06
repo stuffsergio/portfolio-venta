@@ -62,7 +62,7 @@ export function correoPagoInicial(datos: DatosPago) {
 
   const html = `<!doctype html>
 <html lang="es">
-  <body style="margin:0;padding:32px 20px;background:#ffffff;color:#111111;font-family:Helvetica,Arial,sans-serif;font-size:16px;line-height:1.5;">
+  <body style="margin:0;padding:32px 20px;background:#ffffff;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;line-height:1.5;">
     <div style="max-width:560px;margin:0 auto;">
       <p style="margin:0 0 16px;">${escapar(saludo)}</p>
       <p style="margin:0 0 16px;">Hemos recibido tu pago en la cuenta de ${escapar(sitio.nombre)}.</p>

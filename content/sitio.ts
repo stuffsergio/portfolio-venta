@@ -205,20 +205,15 @@ export const socios: Socio[] = [
 export const servicios = [
   {
     id: "web",
-    numero: "01",
-    titulo: "Web de presencia local",
+    titulo: "Añade presencia digital a tu negocio",
     bajada:
-      "La página que el negocio enseña en su ficha de Google, en Maps y en el resto de perfiles.",
-    texto:
-      "La programamos para quien ya os ha encontrado: se entiende en el móvil, se puede llamar y escribir por WhatsApp, y deja claros los horarios, los servicios y cómo llegar. Es la web del negocio, hecha para ese negocio, lista para enlazar.",
+      "Muestra tu web en Google, en Maps y en el resto de perfiles",
     puntos: [
-      "Página clara en el móvil",
+      "Hecha para todo tipo de dispositivos",
       "Llamada, WhatsApp y cómo llegar",
       "Textos, fotos y horarios del negocio",
       "Dirección lista para la ficha de Google",
     ],
-    enlace: "/contacto",
-    cta: "Pedir esta web",
   },
 ] as const
 

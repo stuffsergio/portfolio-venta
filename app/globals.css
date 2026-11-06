@@ -16,7 +16,7 @@
 }
 
 :root {
-  --ink: #111111;
+  --ink: #0a0a0a;
   --muted: #5c5c5c;
   --line: #d8d8d8;
   --paper: #ffffff;
@@ -323,7 +323,6 @@ img {
 
 .ficha-kicker,
 .tipo-plazo,
-.service-num,
 .partner-rol {
   color: var(--muted);
   font-size: 0.75rem;
@@ -331,7 +330,6 @@ img {
   text-transform: uppercase;
 }
 
-.service-num,
 .partner-rol {
   color: var(--wine);
 }
@@ -541,7 +539,7 @@ img {
   min-height: 8.5rem;
   padding: 1rem;
   color: var(--paper);
-  background: #111;
+  background: var(--ink);
 }
 
 .project-card:nth-child(2) .project-panel {
@@ -561,7 +559,7 @@ img {
   display: block;
   padding: 0;
   overflow: hidden;
-  background: #111;
+  background: var(--ink);
 }
 
 .project-panel-foto img,
@@ -694,10 +692,8 @@ img {
 
 .service-copy {
   max-width: 42rem;
-}
-
-.service-copy strong {
-  color: var(--ink);
+  color: var(--muted);
+  font-weight: 400;
 }
 
 .ticks {
@@ -1293,6 +1289,16 @@ img {
     animation: none;
     transition: none;
   }
+
+  .proceso-paso {
+    position: static;
+  }
+
+  .proceso-tarjeta {
+    min-height: 0;
+    margin-bottom: 0.75rem;
+    transform: none;
+  }
 }
 
 .logo-name {
@@ -1674,6 +1680,75 @@ img {
   color: var(--ink);
   background: transparent;
   border: 0;
+}
+
+.proceso-paso {
+  position: sticky;
+  top: calc(var(--header) + 0.75rem);
+}
+
+.proceso-tarjeta {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  align-items: stretch;
+  gap: clamp(1rem, 2.5vw, 2.2rem);
+  min-height: calc(100svh - var(--header) - 2.5rem);
+  padding: clamp(1rem, 2vw, 1.6rem);
+  transform-origin: center top;
+  background: var(--ink);
+  color: #fff;
+  border-radius: 1.75rem;
+  will-change: transform;
+}
+
+.proceso-dibujo {
+  display: flex;
+  align-items: center;
+  border-radius: 1.25rem;
+  background: #fff;
+  padding: 0.85rem;
+}
+
+.proceso-dibujo svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.proceso-copia {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding-block: clamp(0.85rem, 3vh, 2rem);
+}
+
+.proceso-num {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+}
+
+.proceso-tarjeta h3 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(1.8rem, 3.4vw, 3.2rem);
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+}
+
+.proceso-copia p:last-child {
+  max-width: 28rem;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+@media (max-width: 720px) {
+  .proceso-tarjeta {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto minmax(16rem, 1fr);
+  }
 }
 
 @keyframes cinta {
