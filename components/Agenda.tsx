@@ -27,9 +27,12 @@ export function Agenda() {
             Vemos el negocio y si os encaja la página. Sin compromiso.
           </p>
           <ul className="ticks">
-            <li>Elegís el hueco en el calendario.</li>
-            <li>La llamada es por vídeo, con quien hace el trabajo.</li>
-            <li>Salís con el siguiente paso, no con una presentación.</li>
+            <li>Elegid el hueco en el calendario.</li>
+            <li>
+              La llamada es por teléfono, con quien hace el trabajo. Si hace
+              falta otro formato, se acuerda antes.
+            </li>
+            <li>Os lleváis el siguiente paso, no una presentación.</li>
           </ul>
         </div>
         <div className="agenda-marco">

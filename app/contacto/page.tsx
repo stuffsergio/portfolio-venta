@@ -30,12 +30,12 @@ export default function ContactoPage({
 }) {
   return (
     <>
-      <header className="wrap page-head">
+      <header className="wrap page-head pagina-centrada">
         <p className="kicker">Contacto</p>
         <h1>Escríbenos.</h1>
         <p className="lead">Nombre, un teléfono o un correo, y un mensaje si quieres.</p>
       </header>
-      <div className="wrap section">
+      <div className="wrap section pagina-centrada">
         <Suspense fallback={<ContactForm />}>
           <FormularioConServicio searchParams={searchParams} />
         </Suspense>

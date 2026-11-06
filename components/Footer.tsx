@@ -16,7 +16,6 @@ export function Footer() {
           </p>
         </div>
         <div className="footer-links">
-          <a href={`tel:${sitio.telefonoE164}`}>{sitio.telefonoVisible}</a>
           <a
             href={enlaceWhatsapp(sitio.mensajeWhatsapp)}
             target="_blank"

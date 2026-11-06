@@ -25,7 +25,15 @@ export default function Home() {
               <strong>{seccion.titulo}</strong>
               <span>{seccion.texto}</span>
             </span>
-            <span className="indice-ver">Ver</span>
+            <span className="indice-ver" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M5 12h14M13 6l6 6-6 6"
+                  stroke="currentColor"
+                  strokeWidth="1.6"
+                />
+              </svg>
+            </span>
           </Link>
         ))}
       </nav>

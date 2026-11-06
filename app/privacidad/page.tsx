@@ -16,8 +16,8 @@ export default function PrivacidadPage() {
       <div className="wrap prose">
         <h2>Responsable</h2>
         <p>
-          {sitio.nombre}, en {sitio.localidad}. Contacto:{" "}
-          <a href={`tel:${sitio.telefonoE164}`}>{sitio.telefonoVisible}</a>.
+          {sitio.nombre}, en {sitio.localidad}. Contacto: por el formulario de
+          la web o por WhatsApp.
         </p>
         <h2>Qué datos se tratan</h2>
         <p>

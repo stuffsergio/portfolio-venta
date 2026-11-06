@@ -1286,6 +1286,9 @@ img {
   }
 
   .marquee-pista,
+  .marquee-marco > img,
+  .marquee-grid,
+  .marquee-ver,
   .visor img {
     animation: none;
     transition: none;
@@ -1302,11 +1305,38 @@ img {
 }
 
 .header-contacto,
-.enlace-texto,
-.indice-ver {
+.enlace-texto {
   color: var(--ink);
   text-decoration: underline;
   text-underline-offset: 0.22em;
+}
+
+.indice-ver {
+  display: grid;
+  flex: none;
+  place-items: center;
+  color: var(--ink);
+}
+
+.indice-ver svg {
+  width: 1.35rem;
+  height: 1.35rem;
+}
+
+.pagina-centrada {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.pagina-centrada .lead,
+.pagina-centrada .form {
+  width: min(32rem, 100%);
+}
+
+.pagina-centrada .form {
+  text-align: start;
 }
 
 .site-header {
@@ -1335,8 +1365,24 @@ img {
 }
 
 .marquee {
+  position: relative;
   overflow: hidden;
   margin-block: 1.5rem 2.5rem;
+  margin-inline: max(1.25rem, calc((100% - 1120px) / 2));
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 8%,
+    #000 92%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 8%,
+    #000 92%,
+    transparent 100%
+  );
 }
 
 .marquee:hover .marquee-pista {
@@ -1350,21 +1396,99 @@ img {
   animation: cinta 36s linear infinite;
 }
 
+.marquee-lado {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 8%;
+  z-index: 2;
+  pointer-events: none;
+  backdrop-filter: blur(18px);
+}
+
+.marquee-lado-izq {
+  left: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.72), transparent);
+  -webkit-mask-image: linear-gradient(to right, #000 0%, transparent 100%);
+  mask-image: linear-gradient(to right, #000 0%, transparent 100%);
+}
+
+.marquee-lado-der {
+  right: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.72), transparent);
+  -webkit-mask-image: linear-gradient(to left, #000 0%, transparent 100%);
+  mask-image: linear-gradient(to left, #000 0%, transparent 100%);
+}
+
 .marquee-item {
   display: grid;
   gap: 0.55rem;
-  width: min(28rem, 70vw);
+  width: min(24rem, 62vw);
   color: inherit;
   text-decoration: none;
 }
 
-.marquee-item img,
-.marquee-vacio {
-  width: 100%;
-  height: 46vh;
-  min-height: 16rem;
-  object-fit: cover;
+.marquee-marco {
+  position: relative;
+  display: block;
+  height: 40vh;
+  min-height: 14rem;
+  overflow: hidden;
+  border-radius: 1.75rem;
   background: var(--wash);
+}
+
+.marquee-marco > img,
+.marquee-vacio,
+.marquee-grid {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.marquee-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.marquee-item .marquee-grid img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  border-radius: 0;
+  object-fit: cover;
+}
+
+.marquee-item:hover .marquee-marco > img,
+.marquee-item:hover .marquee-grid,
+.marquee-item:hover .marquee-vacio,
+.marquee-item:focus-visible .marquee-marco > img,
+.marquee-item:focus-visible .marquee-grid,
+.marquee-item:focus-visible .marquee-vacio {
+  opacity: 0.86;
+  filter: blur(2px);
+}
+
+.marquee-ver {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: var(--ink);
+  font-size: 1.05rem;
+  letter-spacing: -0.03em;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.28);
+  opacity: 0;
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.marquee-item:hover .marquee-ver,
+.marquee-item:focus-visible .marquee-ver {
+  opacity: 1;
 }
 
 .marquee-vacio {
@@ -1376,6 +1500,7 @@ img {
 }
 
 .marquee-nombre {
+  padding-left: 0.75rem;
   font-size: 0.95rem;
 }
 
@@ -1423,6 +1548,7 @@ img {
   margin-bottom: 1.6rem;
   background: var(--wash);
   overflow: hidden;
+  border-radius: 1.75rem;
 }
 
 .visor img {
@@ -1451,6 +1577,7 @@ img {
 .form {
   max-width: 32rem;
   margin-top: 1.6rem;
+  margin-inline: auto;
 }
 
 .enlace-texto {

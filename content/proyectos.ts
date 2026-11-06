@@ -36,7 +36,12 @@ export const proyectos: Proyecto[] = [
       "Una tienda en notteclub.es: catálogo, ficha de cada prenda, carrito, pago con Stripe, newsletter, lookbook y fondos de pantalla.",
     resultado:
       "Quien quiere una prenda la elige y la paga en la web de la marca.",
-    imagenes: ["/proyectos/notte-club.webp", "/proyectos/notte-club-2.webp"],
+    imagenes: [
+      "/proyectos/notte-01.jpg",
+      "/proyectos/notte-02.webp",
+      "/proyectos/notte-03.webp",
+      "/proyectos/notte-04.webp",
+    ],
     cliente: {
       nombre: "Notte Club",
       enlace: "https://notteclub.es",
@@ -57,10 +62,36 @@ export const proyectos: Proyecto[] = [
       "Una web editorial en navy y blanco: el evento destacado a pantalla completa, el archivo de volúmenes, la galería y el enlace a Instagram.",
     resultado:
       "Caseo tiene una web de marca, con la próxima noche delante y el archivo detrás.",
-    imagenes: ["/proyectos/caseo-cartel.webp", "/proyectos/caseo-noche.jpg"],
+    imagenes: ["/proyectos/caseo-01.jpg", "/proyectos/caseo-noche.jpg"],
     cliente: {
-      nombre: "Caseo",
+      nombre: "Caseo Events",
       enlace: "https://caseo-events.vercel.app/",
+    },
+    ejemplo: false,
+  },
+  {
+    slug: "chiringuito-mauri",
+    sector: "Hostelería",
+    tipo: "web",
+    etiqueta: "Web de presencia",
+    titulo: "Chiringuito Mauri, la mesa en la playa",
+    resumen:
+      "Página del chiringuito de El Playazo, en Nerja, con la carta, el horario y cómo llegar.",
+    problema:
+      "Quien buscaba el chiringuito no tenía una página donde ver la playa, la brasa y si podía sentarse sin reservar.",
+    solucion:
+      "Una web en español e inglés: el lugar, las especialidades, la galería, el horario, el mapa de El Playazo y la llamada. Las preguntas de antes de ir —sin reservas, la paella, el parking y el perro— quedan a la vista.",
+    resultado:
+      "Quien llega desde Google ve la mesa, la carta y el camino a la arena antes de salir de casa.",
+    imagenes: [
+      "/proyectos/mauri-01.webp",
+      "/proyectos/mauri-02.webp",
+      "/proyectos/mauri-03.webp",
+      "/proyectos/mauri-04.jpg",
+    ],
+    cliente: {
+      nombre: "Chiringuito Mauri",
+      enlace: "https://chiringuito-mauri.vercel.app/",
     },
     ejemplo: false,
   },

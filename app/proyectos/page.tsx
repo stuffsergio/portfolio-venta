@@ -5,7 +5,7 @@ import { proyectos } from "@/content/proyectos";
 export const metadata: Metadata = {
   title: "Proyectos",
   description:
-    "Notte Club, Caseo y casos de muestra de webs para negocios locales.",
+    "Notte Club, Caseo Events, Chiringuito Mauri y casos de muestra de webs para negocios locales.",
 };
 
 export default function ProyectosPage() {
@@ -15,7 +15,7 @@ export default function ProyectosPage() {
         <p className="kicker">Proyectos</p>
         <h1>El trabajo, contado por sector.</h1>
         <p className="lead">
-          Notte Club y Caseo se pueden visitar. El resto son muestras del tipo
+          Notte Club, Caseo Events y Chiringuito Mauri se pueden visitar. El resto son muestras del tipo
           de página para un negocio local, todavía sin nombre de cliente.
         </p>
       </header>

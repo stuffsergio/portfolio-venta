@@ -1,5 +1,5 @@
 /**
- * Datos del estudio. Nombre, teléfono y WhatsApp se cambian solo aquí.
+ * Datos del estudio. El nombre y WhatsApp se cambian solo aquí.
  */
 
 export const sitio = {
@@ -14,8 +14,6 @@ export const sitio = {
   localidad: "Málaga",
   region: "Andalucía",
   pais: "España",
-  telefonoVisible: "600 000 000",
-  telefonoE164: "+34600000000",
   whatsapp: "34600000000",
   mensajeWhatsapp:
     "Hola. Tengo un negocio en Málaga y quiero una web para mi ficha de Google.",
@@ -46,12 +44,7 @@ export const seccionesInicio = [
   {
     href: "/proyectos",
     titulo: "Proyectos",
-    texto: "Notte Club y Caseo, para verlos enteros.",
-  },
-  {
-    href: "/presupuesto",
-    titulo: "Presupuesto",
-    texto: "Qué entra en la página, el plazo y el mensaje.",
+    texto: "Notte Club, Caseo Events y Chiringuito Mauri.",
   },
   {
     href: "/llamada",
@@ -61,7 +54,7 @@ export const seccionesInicio = [
   {
     href: "/pago",
     titulo: "Pago",
-    texto: "El cobro de la web, directo a Stripe.",
+    texto: "Accede al pago de tu web",
   },
 ] as const
 
@@ -69,7 +62,6 @@ export const navegacion = [
   { href: "/", label: "Inicio" },
   { href: "/servicios", label: "Servicios" },
   { href: "/proyectos", label: "Proyectos" },
-  { href: "/presupuesto", label: "Presupuesto" },
   { href: "/estudio", label: "El estudio" },
   { href: "/contacto", label: "Contacto" },
 ] as const
@@ -225,48 +217,8 @@ export const servicios = [
       "Textos, fotos y horarios del negocio",
       "Dirección lista para la ficha de Google",
     ],
-    enlace: "/presupuesto",
+    enlace: "/contacto",
     cta: "Pedir esta web",
-  },
-] as const
-
-export const lineasPresupuesto = [
-  {
-    id: "web",
-    titulo: "Web de presencia",
-    plazo: "2 a 3 semanas",
-    texto:
-      "La página de la ficha de Google: móvil, llamada, WhatsApp, horarios, servicios y cómo llegar.",
-    incluye: [
-      "Una página clara en el móvil",
-      "Llamada, WhatsApp y mapa",
-      "Textos y horarios del negocio",
-      "Dirección lista para la ficha",
-    ],
-  },
-] as const
-
-export const extrasPresupuesto = [
-  { id: "paginas", tipo: "web", label: "Más de una página" },
-  { id: "textos", tipo: "web", label: "Textos escritos por el estudio" },
-  { id: "fotos", tipo: "web", label: "Selección de fotografías" },
-] as const
-
-export const condicionesPresupuesto = [
-  {
-    titulo: "El importe se escribe antes",
-    texto:
-      "Sale de lo que marques aquí. Lo confirmamos por escrito antes de empezar, con el alcance y el plazo.",
-  },
-  {
-    titulo: "50% al aceptar",
-    texto:
-      "Ese pago reserva las fechas y pone el trabajo en marcha. A partir de ahí el calendario es vuestro.",
-  },
-  {
-    titulo: "50% al publicar",
-    texto:
-      "El resto se abona cuando la web está en el aire y la dirección está lista para la ficha de Google.",
   },
 ] as const
 
@@ -277,7 +229,6 @@ export function datosEstructurados() {
     name: sitio.nombre,
     description: sitio.descripcion,
     url: sitio.url,
-    telephone: sitio.telefonoE164,
     areaServed: {
       "@type": "City",
       name: sitio.localidad,

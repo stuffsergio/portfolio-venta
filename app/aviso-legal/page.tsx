@@ -24,10 +24,9 @@ export default function AvisoLegalPage() {
           negocios. Ámbito: {sitio.localidad}, {sitio.region}, {sitio.pais}.
         </p>
         <p>
-          Contacto:{" "}
-          <a href={`tel:${sitio.telefonoE164}`}>{sitio.telefonoVisible}</a>. La
-          calle se publicará cuando el estudio tenga un local o un domicilio
-          fiscal que mostrar.
+          Contacto: por el formulario de la web o por WhatsApp. La calle se
+          publicará cuando el estudio tenga un local o un domicilio fiscal que
+          mostrar.
         </p>
         <h2>Objeto</h2>
         <p>
